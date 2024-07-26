@@ -2,8 +2,7 @@
 Caso esteja errado, peça a digitação novamente até ter um valor correto.'''
 
 
-sexo = str(input('Digite seu sexo [M/F]: ')).strip().upper()
-while sexo != 'M' and sexo != 'F':
-    print('\nVocê digitou o sexo errado. Digite novamente!')
-    sexo = str(input('\nDigite seu sexo [M/F]: ')).strip().upper()
-print('\Você digitou corretamente! Fim do programa.')
+sexo = str(input('Digite seu sexo [M/F]: ')).strip().upper()[0]
+while sexo not in 'MmFf':
+    sexo = str(input('\nVocê digitou o sexo errado. Digite seu sexo [M/F]: ')).strip().upper()[0]
+print('\nVocê digitou corretamente! Fim do programa.')
