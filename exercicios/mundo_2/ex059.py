@@ -6,6 +6,8 @@
 [5] Sair do programa
 Seu programa deverá realizar a operação solicitada em cada caso.'''
 
+from time import sleep
+
 num1 = int(input('\nDigite o primeiro número: '))
 num2 = int(input('Digite o segundo número: '))
 
@@ -22,10 +24,10 @@ while opcao != 5:
     if opcao == 1:
         soma = num1 + num2
         print(f'A soma dos números {num1} e {num2} é a igual {soma}.')
-    if opcao == 2:
+    elif opcao == 2:
         mult = num1 * num2
         print(f'A multiplicação dos números {num1} e {num2} é a igual {mult}.')
-    if opcao == 3:
+    elif opcao == 3:
         maior = num1
         if num2 > maior:
             maior = num2
@@ -34,7 +36,8 @@ while opcao != 5:
             print(f'O maior valor entre {num1} e {num2} é o {maior}.')
         elif maior == num2:
             print(f'Os dois valores {num1} e {num2} são iguais.')
-    if opcao == 4:
+    elif opcao == 4:
         num1 = int(input('Digite o novo primeiro número: '))
         num2 = int(input('Digite o novo segundo número: '))
+    sleep(1)
 print('\nFim do programa!')

@@ -3,12 +3,15 @@ Só que agora o jogador vai tentar adivinhar até acertar, mostrando no final qu
 
 from random import randint
 
-pc = randint(1,10)
+pc = randint(0, 10)
 
 count = 0
 user = int(input('Tente adivinhar, qual número o computador pensou? '))
 while pc != user:
     print('\nVocê ERROU!!')
     count += 1
-    user = int(input('Tente adivinhar novamente: '))
+    if user > pc:
+        user = int(input('DICA: O número é menor do que o que você digitou. Tente adivinhar novamente: '))
+    else:
+        user = int(input('DICA: O número é maior do que o que você digitou. Tente adivinhar novamente: '))
 print(f'\nVocê ACERTOU!! Foram necessárias {count} tentativas até acertar.')
